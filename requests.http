@@ -1,0 +1,48 @@
+### USER ROUTES
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "Test name",
+  "email": "test@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
+}
+
+### CAPSTONE ROUTES
+### Index
+GET http://localhost:3000/capstone
+
+###SHOW
+GET http://localhost:3000/capstone/2
+
+### DELETE
+DELETE http://localhost:3000/capstone/1
+
+###CREATE
+POST http://localhost:3000/capstone/new
+Content-Type: application/json
+
+{
+  "name" : "Pacman",
+  "description": "Video Game",
+  "url": "google.com" 
+}
+###UPDATE
+PATCH http://localhost:3000/capstone/2
+Content-Type: application/json
+
+{
+  "name" : "Example",
+  "description": "Video Game",
+  "url": "google.com"
+} 

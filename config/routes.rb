@@ -3,4 +3,16 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  get "/capstone" => "capstone#index"
+
+  get "/capstone/:id" => "capstone#show"
+
+  delete "/capstone/:id" => "capstone#destroy"
+
+  post "/capstone/new" => "capstone#create"
+
+  patch "/capstone/:id" => "capstone#update"
+  post "/users" => "users#create"
+
+  post "/sessions" => "sessions#create"
 end
