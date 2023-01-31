@@ -46,3 +46,14 @@ Content-Type: application/json
   "description": "Video Game",
   "url": "google.com"
 } 
+
+### STUDENT SHOW 
+GET http://localhost:3000/student/1.json
+
+### STUDENT UPDATE
+PATCH http://localhost:3000/students/1.json 
+Content-Type: application/json
+
+{
+  
+}
