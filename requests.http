@@ -46,23 +46,61 @@ Content-Type: application/json
   "description": "Video Game",
   "url": "google.com"
 } 
+### SKILL ROUTES
+### Index
+GET http://localhost:3000/skill
 
+###SHOW
+GET http://localhost:3000/skill/2
 
+### DELETE
+DELETE http://localhost:3000/skill/2
 
-
-
-
-
-
-
-### Education Create
-POST http://localhost:3000/educations
+###CREATE
+POST http://localhost:3000/skill/new
 Content-Type: application/json
 
 {
-  "start": "03-03-21",
-  "end": "05-07-22",
-  "degree": "Economics",
-  "university": "UCLA",
-  "details": "I did stuff"
+  "name" : "C++"
+}
+###UPDATE
+PATCH http://localhost:3000/skill/3
+Content-Type: application/json
+
+{
+  "name" : "C#"
+} 
+
+
+### EXPERIENCE ROUTES
+### Index
+GET http://localhost:3000/experience
+
+###SHOW
+GET http://localhost:3000/experience/1
+
+### DELETE
+DELETE http://localhost:3000/experience/3
+
+###CREATE
+POST http://localhost:3000/experience/new
+Content-Type: application/json
+
+{
+  "start": "2023-05-11",
+  "end": "2023-06-16",
+  "title": "Crew Member",
+  "company": "FOODGUYS",
+  "details": "Served something"
+}
+###UPDATE
+PATCH http://localhost:3000/experience/3
+Content-Type: application/json
+
+{
+  "start": "2023-05-11",
+  "end": "2023-06-16",
+  "title": "Crew Member",
+  "company": "Jumbo",
+  "details": "Served something"
 }
