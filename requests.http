@@ -46,3 +46,23 @@ Content-Type: application/json
   "description": "Video Game",
   "url": "google.com"
 } 
+
+
+
+
+
+
+
+
+
+### Education Create
+POST http://localhost:3000/educations
+Content-Type: application/json
+
+{
+  "start": "03-03-21",
+  "end": "05-07-22",
+  "degree": "Economics",
+  "university": "UCLA",
+  "details": "I did stuff"
+}

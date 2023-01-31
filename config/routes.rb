@@ -15,4 +15,14 @@ Rails.application.routes.draw do
   post "/users" => "users#create"
 
   post "/sessions" => "sessions#create"
+
+  ###EDUCATION
+  get "educations" => "educations#index"
+  post "educations" => "educations#create"
+  get "educations/:id" => "educations#show"
+  patch "educations/:id" => "educations#update"
+  delete "educations/:id" => "educations#destroy"
+  # post "educations" => "educations#create"
+
+
 end
