@@ -1,6 +1,9 @@
 class Education < ApplicationRecord
+	belongs_to :student
+
 	def self.fake_params
 		return {
+			student_id: Student.all.sample.id,
 			start: Faker::Date.backward,
 			end: Faker::Date.forward,
 			degree: Faker::Educator.degree,
