@@ -20,25 +20,25 @@ Content-Type: application/json
 
 ### CAPSTONE ROUTES
 ### Index
-GET http://localhost:3000/capstone
+GET http://localhost:3000/capstones
 
 ###SHOW
-GET http://localhost:3000/capstone/2
+GET http://localhost:3000/capstones/2
 
 ### DELETE
-DELETE http://localhost:3000/capstone/1
+DELETE http://localhost:3000/capstones/1
 
 ###CREATE
-POST http://localhost:3000/capstone/new
+POST http://localhost:3000/capstones
 Content-Type: application/json
 
 {
-  "name" : "Pacman",
+  "name" : "Pacman2",
   "description": "Video Game",
   "url": "google.com" 
 }
 ###UPDATE
-PATCH http://localhost:3000/capstone/2
+PATCH http://localhost:3000/capstones/2
 Content-Type: application/json
 
 {
@@ -46,27 +46,87 @@ Content-Type: application/json
   "description": "Video Game",
   "url": "google.com"
 } 
+
+### STUDENT INDEX
+GET http://localhost:3000/students.json
+
+### STUDENT SHOW
+GET http://localhost:3000/students/1.json
+
+### STUDENT UPDATE
+PATCH http://localhost:3000/students/1.json 
+Content-Type: application/json
+
+{
+  "first_name": "Fred"
+}
+
+### STUDENT CREATE
+POST http://localhost:3000/students.json
+Content-Type: application/json
+
+{
+  "first_name": "test"
+}
+
+### STUDENT DESTROY
+DELETE http://localhost:3000/students/1.json
+
 ### SKILL ROUTES
 ### Index
-GET http://localhost:3000/skill
+GET http://localhost:3000/skills
 
 ###SHOW
-GET http://localhost:3000/skill/2
+GET http://localhost:3000/skills/2
 
 ### DELETE
-DELETE http://localhost:3000/skill/2
+DELETE http://localhost:3000/skills/2
 
 ###CREATE
-POST http://localhost:3000/skill/new
+POST http://localhost:3000/skills
 Content-Type: application/json
 
 {
   "name" : "C++"
 }
 ###UPDATE
-PATCH http://localhost:3000/skill/3
+PATCH http://localhost:3000/skills/3
 Content-Type: application/json
 
 {
   "name" : "C#"
 } 
+
+
+### EXPERIENCE ROUTES
+### Index
+GET http://localhost:3000/experiences
+
+###SHOW
+GET http://localhost:3000/experiences/1
+
+### DELETE
+DELETE http://localhost:3000/experiences/3
+
+###CREATE
+POST http://localhost:3000/experiences
+Content-Type: application/json
+
+{
+  "start": "2023-05-11",
+  "end": "2023-06-16",
+  "title": "Crew Member",
+  "company": "FOODGUYS2",
+  "details": "Served something"
+}
+###UPDATE
+PATCH http://localhost:3000/experiences/3
+Content-Type: application/json
+
+{
+  "start": "2023-05-11",
+  "end": "2023-06-16",
+  "title": "Crew Member",
+  "company": "Jumbo",
+  "details": "Served something"
+}

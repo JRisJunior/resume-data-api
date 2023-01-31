@@ -1,4 +1,4 @@
-class CapstoneController < ApplicationController
+class CapstonesController < ApplicationController
   def index
     capstone = Capstone.all
     render json: capstone.as_json
