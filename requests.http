@@ -104,3 +104,36 @@ Content-Type: application/json
   "company": "Jumbo",
   "details": "Served something"
 }
+
+### EDUCATIONS ROUTES
+### Index
+GET http://localhost:3000/educations
+
+###SHOW
+GET http://localhost:3000/educations/1
+
+### DELETE
+DELETE http://localhost:3000/educations/3
+
+###CREATE
+POST http://localhost:3000/educations
+Content-Type: application/json
+
+{
+  "start": "2023-05-11",
+  "end": "2023-06-16",
+  "degree": "Physics",
+  "university": "UTA",
+  "details": "Physics degree"
+}
+###UPDATE
+PATCH http://localhost:3000/educations/4
+Content-Type: application/json
+
+{
+  "start": "2023-05-11",
+  "end": "2023-06-16",
+  "degree": "Electrical Engineering",
+  "university": "Cambodia University",
+  "details": "Changed to Electrical Engineering"
+}
