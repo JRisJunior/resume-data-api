@@ -46,6 +46,32 @@ Content-Type: application/json
   "description": "Video Game",
   "url": "google.com"
 } 
+
+### STUDENT INDEX
+GET http://localhost:3000/students.json
+
+### STUDENT SHOW
+GET http://localhost:3000/students/1.json
+
+### STUDENT UPDATE
+PATCH http://localhost:3000/students/1.json 
+Content-Type: application/json
+
+{
+  "first_name": "Fred"
+}
+
+### STUDENT CREATE
+POST http://localhost:3000/students.json
+Content-Type: application/json
+
+{
+  "first_name": "test"
+}
+
+### STUDENT DESTROY
+DELETE http://localhost:3000/students/1.json
+
 ### SKILL ROUTES
 ### Index
 GET http://localhost:3000/skills
