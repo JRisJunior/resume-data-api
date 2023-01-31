@@ -7,35 +7,35 @@ Rails.application.routes.draw do
   
   post "/sessions" => "sessions#create"
   
-  get "/capstone" => "capstone#index"
+  get "/capstones" => "capstone#index"
 
-  get "/capstone/:id" => "capstone#show"
+  get "/capstones/:id" => "capstone#show"
 
-  delete "/capstone/:id" => "capstone#destroy"
+  delete "/capstones/:id" => "capstone#destroy"
 
-  post "/capstone/new" => "capstone#create"
+  post "/capstones" => "capstone#create"
 
-  patch "/capstone/:id" => "capstone#update"
+  patch "/capstones/:id" => "capstone#update"
 
   #Skills
-  get "/skill" => "skill#index"
+  get "/skills" => "skill#index"
 
-  get "/skill/:id" => "skill#show"
+  get "/skills/:id" => "skill#show"
 
-  delete "/skill/:id" => "skill#destroy"
+  delete "/skills/:id" => "skill#destroy"
 
-  post "/skill/new" => "skill#create"
+  post "/skills" => "skill#create"
 
-  patch "/skill/:id" => "skill#update"
+  patch "/skills/:id" => "skill#update"
 
   #EXPERIENCE ROUTES
-  get "/experience" => "experience#index"
+  get "/experiences" => "experience#index"
 
-  get "/experience/:id" => "experience#show"
+  get "/experiences/:id" => "experience#show"
 
-  delete "/experience/:id" => "experience#destroy"
+  delete "/experiences/:id" => "experience#destroy"
 
-  post "/experience/new" => "experience#create"
+  post "/experiences" => "experience#create"
 
-  patch "/experience/:id" => "experience#update"
+  patch "/experiences/:id" => "experience#update"
 end
