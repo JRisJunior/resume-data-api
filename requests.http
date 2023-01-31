@@ -47,7 +47,10 @@ Content-Type: application/json
   "url": "google.com"
 } 
 
-### STUDENT SHOW 
+### STUDENT INDEX
+GET http://localhost:3000/students.json
+
+### STUDENT Show
 GET http://localhost:3000/students/1.json
 
 ### STUDENT UPDATE
@@ -57,6 +60,17 @@ Content-Type: application/json
 {
   "first_name": "Fred"
 }
+
+### STUDENT CREATE
+POST http://localhost:3000/students.json
+Content-Type: application/json
+
+{
+  "first_name": "test"
+}
+
+### STUDENT DESTROY
+DELETE http://localhost:3000/students/1.json
 
 ### SKILL ROUTES
 ### Index

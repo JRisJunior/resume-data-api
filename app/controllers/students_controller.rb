@@ -1,4 +1,30 @@
 class StudentsController < ApplicationController
+  def index 
+    students = Student.all
+    render students.as_json 
+  end
+  
+  def create 
+    student = Student.create(
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      email: params[:email],
+      phone: params[:phone],
+      biography: params[:biography],
+      linkedin_url: params[:linkedin_url],
+      twitter_user: params[:twitter_user],
+      website_url: params[:website_url],
+      resume_url: params[:resume_url],
+      github_url: params[:github_url],
+      photo_url: params[:photo_url]
+    )
+    if student.save
+      render json: student.as_json
+    else 
+      render json: { errors: student.errors.full_messages }, status: :bad_request
+    end
+  end
+  
   def show
     student = Student.find_by(id: params[:id])
     render json: student.as_json
@@ -19,6 +45,16 @@ class StudentsController < ApplicationController
       github_url: params[:github_url] || student.github_url,
       photo_url: params[:photo_url] || student.photo_url
     )
-    render json: student.as_json
+    if student.save
+      render json: student.as_json
+    else 
+      render json: { errors: student.errors.full_messages }, status: :bad_request
+    end
+  end
+
+  def destroy
+    student = Student.find_by(id: params[:id])
+    student.delete
+    render json: {message: "Successfully Deleted"}
   end
 end
