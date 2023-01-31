@@ -27,4 +27,15 @@ Rails.application.routes.draw do
   post "/skill/new" => "skill#create"
 
   patch "/skill/:id" => "skill#update"
+
+  #EXPERIENCE ROUTES
+  get "/experience" => "experience#index"
+
+  get "/experience/:id" => "experience#show"
+
+  delete "/experience/:id" => "experience#destroy"
+
+  post "/experience/new" => "experience#create"
+
+  patch "/experience/:id" => "experience#update"
 end
