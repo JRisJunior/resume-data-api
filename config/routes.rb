@@ -28,6 +28,19 @@ Rails.application.routes.draw do
   # post "educations" => "educations#create"
 
 
+  post "/sessions" => "sessions#create"
+
+  #Student
+  get "/students" => "students#index"
+
+  get "/students/:id" => "students#show"
+
+  patch "/students/:id" => "students#update"
+
+  post "/students" => "students#create"
+
+  delete "/students/:id" => "students#destroy"
+
   #Skills
   get "/skills" => "skills#index"
 
