@@ -24,4 +24,15 @@ class CapstoneController < ApplicationController
     capstone.save
     render json: {message: "Successfully Created"}
   end
+
+  def update
+    capstone = Capstone.find_by(id: params[:id])
+    capstone.update(
+      name: params[:name],
+      description: params[:description],
+      url: params[:url]
+    )
+    capstone.save
+    render json: {message: "Successfully updated"}
+  end
 end

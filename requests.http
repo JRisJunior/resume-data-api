@@ -1,4 +1,4 @@
-### Capstone
+### CAPSTONE ROUTES
 ### Index
 GET http://localhost:3000/capstone
 
@@ -14,6 +14,15 @@ Content-Type: application/json
 
 {
   "name" : "Pacman",
+  "description": "Video Game",
+  "url": "google.com" 
+}
+###UPDATE
+PATCH http://localhost:3000/capstone/2
+Content-Type: application/json
+
+{
+  "name" : "Example",
   "description": "Video Game",
   "url": "google.com" 
 }

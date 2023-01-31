@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   delete "/capstone/:id" => "capstone#destroy"
 
   post "/capstone/new" => "capstone#create"
+
+  patch "/capstone/:id" => "capstone#update"
 end
