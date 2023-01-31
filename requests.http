@@ -51,9 +51,9 @@ Content-Type: application/json
 GET http://localhost:3000/student/1.json
 
 ### STUDENT UPDATE
-PATCH http://localhost:3000/students/1.json 
+PATCH http://localhost:3000/student/1.json 
 Content-Type: application/json
 
 {
-  
+  "first_name": "Fred"
 }

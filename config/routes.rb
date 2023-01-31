@@ -16,6 +16,6 @@ Rails.application.routes.draw do
 
   post "/sessions" => "sessions#create"
 
-  get "/students/:id" => "students#show"
-  patch "/students/:id" => "students#update"
+  get "/student/:id" => "students#show"
+  patch "/student/:id" => "students#update"
 end
