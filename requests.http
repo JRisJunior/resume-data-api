@@ -46,3 +46,27 @@ Content-Type: application/json
   "description": "Video Game",
   "url": "google.com"
 } 
+### SKILL ROUTES
+### Index
+GET http://localhost:3000/skill
+
+###SHOW
+GET http://localhost:3000/skill/2
+
+### DELETE
+DELETE http://localhost:3000/skill/2
+
+###CREATE
+POST http://localhost:3000/skill/new
+Content-Type: application/json
+
+{
+  "name" : "C++"
+}
+###UPDATE
+PATCH http://localhost:3000/skill/3
+Content-Type: application/json
+
+{
+  "name" : "C#"
+} 
