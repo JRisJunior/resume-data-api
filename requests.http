@@ -48,12 +48,71 @@ Content-Type: application/json
 } 
 
 ### STUDENT SHOW 
-GET http://localhost:3000/student/1.json
+GET http://localhost:3000/students/1.json
 
 ### STUDENT UPDATE
-PATCH http://localhost:3000/student/1.json 
+PATCH http://localhost:3000/students/1.json 
 Content-Type: application/json
 
 {
   "first_name": "Fred"
+}
+
+### SKILL ROUTES
+### Index
+GET http://localhost:3000/skill
+
+###SHOW
+GET http://localhost:3000/skill/2
+
+### DELETE
+DELETE http://localhost:3000/skill/2
+
+###CREATE
+POST http://localhost:3000/skill/new
+Content-Type: application/json
+
+{
+  "name" : "C++"
+}
+###UPDATE
+PATCH http://localhost:3000/skill/3
+Content-Type: application/json
+
+{
+  "name" : "C#"
+} 
+
+
+### EXPERIENCE ROUTES
+### Index
+GET http://localhost:3000/experience
+
+###SHOW
+GET http://localhost:3000/experience/1
+
+### DELETE
+DELETE http://localhost:3000/experience/3
+
+###CREATE
+POST http://localhost:3000/experience/new
+Content-Type: application/json
+
+{
+  "start": "2023-05-11",
+  "end": "2023-06-16",
+  "title": "Crew Member",
+  "company": "FOODGUYS",
+  "details": "Served something"
+}
+###UPDATE
+PATCH http://localhost:3000/experience/3
+Content-Type: application/json
+
+{
+  "start": "2023-05-11",
+  "end": "2023-06-16",
+  "title": "Crew Member",
+  "company": "Jumbo",
+  "details": "Served something"
 }
