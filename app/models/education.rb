@@ -1,6 +1,6 @@
 class Education < ApplicationRecord
-	def self.fake_params
-		return {
+  def self.fake_params
+				return {
 			start: Faker::Date.backward,
 			end: Faker::Date.forward,
 			degree: Faker::Educator.degree,
