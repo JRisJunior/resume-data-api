@@ -20,25 +20,25 @@ Content-Type: application/json
 
 ### CAPSTONE ROUTES
 ### Index
-GET http://localhost:3000/capstone
+GET http://localhost:3000/capstones
 
 ###SHOW
-GET http://localhost:3000/capstone/2
+GET http://localhost:3000/capstones/2
 
 ### DELETE
-DELETE http://localhost:3000/capstone/1
+DELETE http://localhost:3000/capstones/1
 
 ###CREATE
-POST http://localhost:3000/capstone/new
+POST http://localhost:3000/capstones
 Content-Type: application/json
 
 {
-  "name" : "Pacman",
+  "name" : "Pacman2",
   "description": "Video Game",
   "url": "google.com" 
 }
 ###UPDATE
-PATCH http://localhost:3000/capstone/2
+PATCH http://localhost:3000/capstones/2
 Content-Type: application/json
 
 {
@@ -48,23 +48,23 @@ Content-Type: application/json
 } 
 ### SKILL ROUTES
 ### Index
-GET http://localhost:3000/skill
+GET http://localhost:3000/skills
 
 ###SHOW
-GET http://localhost:3000/skill/2
+GET http://localhost:3000/skills/2
 
 ### DELETE
-DELETE http://localhost:3000/skill/2
+DELETE http://localhost:3000/skills/2
 
 ###CREATE
-POST http://localhost:3000/skill/new
+POST http://localhost:3000/skills
 Content-Type: application/json
 
 {
   "name" : "C++"
 }
 ###UPDATE
-PATCH http://localhost:3000/skill/3
+PATCH http://localhost:3000/skills/3
 Content-Type: application/json
 
 {
@@ -74,27 +74,27 @@ Content-Type: application/json
 
 ### EXPERIENCE ROUTES
 ### Index
-GET http://localhost:3000/experience
+GET http://localhost:3000/experiences
 
 ###SHOW
-GET http://localhost:3000/experience/1
+GET http://localhost:3000/experiences/1
 
 ### DELETE
-DELETE http://localhost:3000/experience/3
+DELETE http://localhost:3000/experiences/3
 
 ###CREATE
-POST http://localhost:3000/experience/new
+POST http://localhost:3000/experiences
 Content-Type: application/json
 
 {
   "start": "2023-05-11",
   "end": "2023-06-16",
   "title": "Crew Member",
-  "company": "FOODGUYS",
+  "company": "FOODGUYS2",
   "details": "Served something"
 }
 ###UPDATE
-PATCH http://localhost:3000/experience/3
+PATCH http://localhost:3000/experiences/3
 Content-Type: application/json
 
 {
