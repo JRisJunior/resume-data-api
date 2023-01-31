@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   post "/capstone/new" => "capstone#create"
 
   patch "/capstone/:id" => "capstone#update"
+  post "/users" => "users#create"
+
+  post "/sessions" => "sessions#create"
 end
