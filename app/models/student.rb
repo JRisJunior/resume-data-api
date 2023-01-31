@@ -1,4 +1,7 @@
 class Student < ApplicationRecord
+	belongs_to :user
+	has_many :experiences
+
 	def self.fake_params
 		first_name = Faker::Name.first_name
 		last_name = Faker::Name.last_name
