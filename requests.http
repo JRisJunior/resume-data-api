@@ -47,22 +47,23 @@ Content-Type: application/json
   "url": "google.com"
 } 
 
+###STUDENTS ROUTES
 ### STUDENT INDEX
-GET http://localhost:3000/students.json
+GET http://localhost:3000/students
 
 ### STUDENT SHOW
-GET http://localhost:3000/students/1.json
+GET http://localhost:3000/students/1
 
 ### STUDENT UPDATE
-PATCH http://localhost:3000/students/1.json 
+PATCH http://localhost:3000/students/1
 Content-Type: application/json
 
 {
-  "first_name": "Fred"
+  "first_name": "Paul"
 }
 
 ### STUDENT CREATE
-POST http://localhost:3000/students.json
+POST http://localhost:3000/students
 Content-Type: application/json
 
 {
@@ -70,7 +71,7 @@ Content-Type: application/json
 }
 
 ### STUDENT DESTROY
-DELETE http://localhost:3000/students/1.json
+DELETE http://localhost:3000/students/4
 
 ### SKILL ROUTES
 ### Index

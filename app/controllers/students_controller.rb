@@ -1,7 +1,7 @@
 class StudentsController < ApplicationController
   def index 
     students = Student.all
-    render students.as_json 
+    render json: students.as_json 
   end
   
   def create 
@@ -19,7 +19,7 @@ class StudentsController < ApplicationController
       photo_url: params[:photo_url]
     )
     if student.save
-      render json: student.as_json
+      render json: {message: "Successfully created"}
     else 
       render json: { errors: student.errors.full_messages }, status: :bad_request
     end
@@ -46,7 +46,7 @@ class StudentsController < ApplicationController
       photo_url: params[:photo_url] || student.photo_url
     )
     if student.save
-      render json: student.as_json
+      render json: {message: "Successfully updated"}
     else 
       render json: { errors: student.errors.full_messages }, status: :bad_request
     end
