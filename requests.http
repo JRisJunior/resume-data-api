@@ -50,7 +50,7 @@ Content-Type: application/json
 ### STUDENT INDEX
 GET http://localhost:3000/students.json
 
-### STUDENT Show
+### STUDENT SHOW
 GET http://localhost:3000/students/1.json
 
 ### STUDENT UPDATE
