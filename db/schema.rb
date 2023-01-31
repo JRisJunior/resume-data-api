@@ -23,8 +23,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_31_190032) do
   end
 
   create_table "educations", force: :cascade do |t|
-    t.date "start"
-    t.date "end"
+    t.datetime "start"
+    t.datetime "end"
     t.string "degree"
     t.string "university"
     t.text "details"
@@ -33,8 +33,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_31_190032) do
   end
 
   create_table "experiences", force: :cascade do |t|
-    t.date "start"
-    t.date "end"
+    t.datetime "start"
+    t.datetime "end"
     t.string "title"
     t.string "company"
     t.text "details"

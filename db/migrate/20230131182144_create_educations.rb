@@ -1,8 +1,8 @@
 class CreateEducations < ActiveRecord::Migration[7.0]
   def change
     create_table :educations do |t|
-      t.date :start
-      t.date :end
+      t.datetime :start
+      t.datetime :end
       t.string :degree
       t.string :university
       t.text :details
