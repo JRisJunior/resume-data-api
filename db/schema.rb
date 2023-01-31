@@ -54,12 +54,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_31_182255) do
     t.string "email"
     t.string "phone"
     t.text "biography"
-    t.string "linkedin"
-    t.string "twitter"
-    t.string "website"
-    t.string "resume"
-    t.string "github"
-    t.string "photo"
+    t.string "linkedin_url"
+    t.string "twitter_user"
+    t.string "website_url"
+    t.string "resume_url"
+    t.string "github_url"
+    t.string "photo_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
