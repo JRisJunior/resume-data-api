@@ -3,8 +3,8 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Test name",
-  "email": "test@test.com",
+  "name": "joe",
+  "email": "joe@test.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -12,9 +12,9 @@ Content-Type: application/json
 ### Sessions create (login)
 POST http://localhost:3000/sessions.json
 Content-Type: application/json
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4LCJleHAiOjE2NzUyODg1ODJ9.Wu7Yi121gA_9nE6SPvdLBBfmdsObsJjN9Ffn_Vax6c8
 {
-  "email": "test@test.com",
+  "email": "joe@test.com",
   "password": "password"
 }
 
