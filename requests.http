@@ -73,6 +73,10 @@ Content-Type: application/json
 ### STUDENT DESTROY
 DELETE http://localhost:3000/students/4
 
+### STUDENT current
+GET http://localhost:3000/students/current
+Content-Type: application/json
+
 ### SKILL ROUTES
 ### Index
 GET http://localhost:3000/skills

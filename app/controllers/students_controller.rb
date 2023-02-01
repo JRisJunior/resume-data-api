@@ -1,4 +1,6 @@
 class StudentsController < ApplicationController
+  before_action :authenticate_user, only: [:current]
+
   def index 
     students = Student.all
     render json: students.as_json 
@@ -56,5 +58,9 @@ class StudentsController < ApplicationController
     student = Student.find_by(id: params[:id])
     student.delete
     render json: {message: "Successfully Deleted"}
+  end
+
+  def current
+    render json: current_user.student.as_json
   end
 end
