@@ -9,4 +9,4 @@ cd "$(dirname "$0")/.."
 
 
 . script/seed
-rails db:seed:dump EXCLUDE=created_at,updated_at
+rails db:seed:dump #EXCLUDE=created_at,updated_at

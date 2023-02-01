@@ -9,4 +9,5 @@ cd "$(dirname "$0")/.."
 
 
 rails db:drop db:create db:migrate
+rails db:environment:set RAILS_ENV=development
 rails runner db/fake_seeds.rb

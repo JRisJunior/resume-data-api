@@ -5,7 +5,7 @@ User.create!({
 })
 
 5.times do #student
-	Student.create_fake!
+	student = Student.create_fake!
 
 	2.times do #education per student
 		Education.create_fake!
@@ -16,7 +16,7 @@ User.create!({
 	end
 
 	5.times do #skills per student
-		Skill.create_fake!
+		student.skills << Skill.create_fake!
 	end
 
 	2.times do #capstones per studnet

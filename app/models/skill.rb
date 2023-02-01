@@ -1,5 +1,6 @@
 class Skill < ApplicationRecord
-	has_and_belongs_to_many :students
+	has_many :skill_students
+	has_many :students, through: :skill_students
 
 	def self.fake_params
 		return {

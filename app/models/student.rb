@@ -2,7 +2,8 @@ class Student < ApplicationRecord
 	belongs_to :user
 	has_many :experiences
 	has_many :educations
-	has_and_belongs_to_many :skills
+	has_many :skill_students
+	has_many :skills, through: :skill_students
 
 	def self.fake_params
 		first_name = Faker::Name.first_name
