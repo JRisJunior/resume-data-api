@@ -1,0 +1,8 @@
+@resumes.map do |resume|
+  {
+    id: resume.id,
+    index: resume.index,
+    show: resume.show,
+    url: resume_url(resume, format: :json)
+  }
+end
