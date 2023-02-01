@@ -1,8 +1,5 @@
-@resumes.map do |resume|
-  {
-    id: resume.id,
-    index: resume.index,
-    show: resume.show,
-    url: resume_url(resume, format: :json)
-  }
+@students.map do |student|
+  student.as_json(
+    methods: [:experiences, :educations, :skills, :capstones]
+  )
 end
