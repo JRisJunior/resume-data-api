@@ -31,6 +31,8 @@ Rails.application.routes.draw do
   post "/sessions" => "sessions#create"
 
   #Student
+  get "/students/current" => "students#current"
+
   get "/students" => "students#index"
 
   get "/students/:id" => "students#show"
