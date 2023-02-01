@@ -164,3 +164,10 @@ Content-Type: application/json
   "university": "Cambodia University",
   "details": "Changed to Electrical Engineering"
 }
+
+### RESUMES ROUTES
+### INDEX
+GET http://localhost:3000/resumes
+
+### SHOW
+GET http://localhost:3000/resume/1
