@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'resumes/index'
-  get 'resumes/show'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -66,8 +64,4 @@ Rails.application.routes.draw do
   post "/experiences" => "experiences#create"
 
   patch "/experiences/:id" => "experiences#update"
-
-  #Resumes
-  get "/resumes" => "resumes#index"
-  get "/resume/:id" => "resumes#show"
 end
