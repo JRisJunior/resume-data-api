@@ -5,13 +5,15 @@ class EducationsController < ApplicationController
   end
 
   def create 
-    education = Education.new(
+    education = Education.create(
     start: params[:start],
     end: params[:end],
     degree: params[:degree],
     university: params[:university],
     details: params[:details]
   )
+    education.save
+    render json: {message: "Successfully created"}
   end
 
   def show
@@ -27,6 +29,8 @@ class EducationsController < ApplicationController
     education.degree = params[:degree] || education.degree
     education.university = params[:university] || education.university
     education.details = params[:details] || education.details
+    education.save
+    render json: {message: "Successfully updated"}
   end
 
   def destroy
@@ -34,6 +38,4 @@ class EducationsController < ApplicationController
     education.destroy
     render json: {message: "It has been succesfully deleted"}
   end
-
-
 end
