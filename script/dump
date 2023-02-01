@@ -1,0 +1,12 @@
+#!/bin/sh
+cd "$(dirname "$0")/.."
+
+# === script/dump ===
+# seed dump database
+#
+# to use:
+# $ . script/dump
+
+
+. script/seed
+rails db:seed:dump EXCLUDE=created_at,updated_at

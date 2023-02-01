@@ -1,0 +1,13 @@
+#!/bin/sh
+cd "$(dirname "$0")/.."
+
+# === script/seed ===
+# reset and seed database
+#
+# to use:
+# $ . script/seed
+
+
+rails db:drop db:create db:migrate
+rails db:environment:set RAILS_ENV=development
+rails runner db/fake_seeds.rb

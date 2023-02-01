@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_31_214205) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_01_183151) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,37 +20,47 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_31_214205) do
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "student_id", null: false
+    t.index ["student_id"], name: "index_capstones_on_student_id"
   end
 
   create_table "educations", force: :cascade do |t|
-    t.date "start"
-    t.date "end"
+    t.datetime "start"
+    t.datetime "end"
     t.string "degree"
     t.string "university"
     t.text "details"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "student_id", null: false
+    t.index ["student_id"], name: "index_educations_on_student_id"
   end
 
   create_table "experiences", force: :cascade do |t|
-    t.date "start"
-    t.date "end"
+    t.datetime "start"
+    t.datetime "end"
     t.string "title"
     t.string "company"
     t.text "details"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "student_id", null: false
+    t.index ["student_id"], name: "index_experiences_on_student_id"
+  end
+
+  create_table "skill_students", force: :cascade do |t|
+    t.bigint "skill_id", null: false
+    t.bigint "student_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["skill_id"], name: "index_skill_students_on_skill_id"
+    t.index ["student_id"], name: "index_skill_students_on_student_id"
   end
 
   create_table "skills", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "skills_students", id: false, force: :cascade do |t|
-    t.bigint "student_id", null: false
-    t.bigint "skill_id", null: false
   end
 
   create_table "students", force: :cascade do |t|
@@ -79,4 +89,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_31_214205) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "capstones", "students"
+  add_foreign_key "educations", "students"
+  add_foreign_key "experiences", "students"
+  add_foreign_key "skill_students", "skills"
+  add_foreign_key "skill_students", "students"
 end
