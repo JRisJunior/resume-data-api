@@ -8,33 +8,6 @@ Student.create!([
   {id: 4, first_name: "Lincoln", last_name: "Mosciski", email: "lincoln@example.net", phone: "864-262-1038", biography: "Ratione est molestiae. Ipsam quo asperiores. Porro enim sed.", linkedin_url: nil, twitter_user: nil, website_url: nil, resume_url: nil, github_url: nil, photo_url: nil, user_id: 1},
   {id: 5, first_name: "Shanta", last_name: "Schulist", email: "shanta@example.org", phone: "1-275-860-6345", biography: "Qui voluptas recusandae. Dolor sit voluptatem. Modi harum porro.", linkedin_url: nil, twitter_user: nil, website_url: nil, resume_url: nil, github_url: nil, photo_url: nil, user_id: 1}
 ])
-SkillStudent.create!([
-  {id: 1, skill_id: 1, student_id: 1},
-  {id: 2, skill_id: 2, student_id: 1},
-  {id: 3, skill_id: 3, student_id: 1},
-  {id: 4, skill_id: 4, student_id: 1},
-  {id: 5, skill_id: 5, student_id: 1},
-  {id: 6, skill_id: 6, student_id: 2},
-  {id: 7, skill_id: 7, student_id: 2},
-  {id: 8, skill_id: 8, student_id: 2},
-  {id: 9, skill_id: 9, student_id: 2},
-  {id: 10, skill_id: 10, student_id: 2},
-  {id: 11, skill_id: 11, student_id: 3},
-  {id: 12, skill_id: 12, student_id: 3},
-  {id: 13, skill_id: 13, student_id: 3},
-  {id: 14, skill_id: 14, student_id: 3},
-  {id: 15, skill_id: 15, student_id: 3},
-  {id: 16, skill_id: 16, student_id: 4},
-  {id: 17, skill_id: 17, student_id: 4},
-  {id: 18, skill_id: 18, student_id: 4},
-  {id: 19, skill_id: 19, student_id: 4},
-  {id: 20, skill_id: 20, student_id: 4},
-  {id: 21, skill_id: 21, student_id: 5},
-  {id: 22, skill_id: 22, student_id: 5},
-  {id: 23, skill_id: 23, student_id: 5},
-  {id: 24, skill_id: 24, student_id: 5},
-  {id: 25, skill_id: 25, student_id: 5}
-])
 Skill.create!([
   {id: 1, name: "Fast learner"},
   {id: 2, name: "Problem solving"},
@@ -61,6 +34,33 @@ Skill.create!([
   {id: 23, name: "Communication"},
   {id: 24, name: "Leadership"},
   {id: 25, name: "Problem solving"}
+])
+SkillStudent.create!([
+  {id: 1, skill_id: 1, student_id: 1},
+  {id: 2, skill_id: 2, student_id: 1},
+  {id: 3, skill_id: 3, student_id: 1},
+  {id: 4, skill_id: 4, student_id: 1},
+  {id: 5, skill_id: 5, student_id: 1},
+  {id: 6, skill_id: 6, student_id: 2},
+  {id: 7, skill_id: 7, student_id: 2},
+  {id: 8, skill_id: 8, student_id: 2},
+  {id: 9, skill_id: 9, student_id: 2},
+  {id: 10, skill_id: 10, student_id: 2},
+  {id: 11, skill_id: 11, student_id: 3},
+  {id: 12, skill_id: 12, student_id: 3},
+  {id: 13, skill_id: 13, student_id: 3},
+  {id: 14, skill_id: 14, student_id: 3},
+  {id: 15, skill_id: 15, student_id: 3},
+  {id: 16, skill_id: 16, student_id: 4},
+  {id: 17, skill_id: 17, student_id: 4},
+  {id: 18, skill_id: 18, student_id: 4},
+  {id: 19, skill_id: 19, student_id: 4},
+  {id: 20, skill_id: 20, student_id: 4},
+  {id: 21, skill_id: 21, student_id: 5},
+  {id: 22, skill_id: 22, student_id: 5},
+  {id: 23, skill_id: 23, student_id: 5},
+  {id: 24, skill_id: 24, student_id: 5},
+  {id: 25, skill_id: 25, student_id: 5}
 ])
 Experience.create!([
   {id: 1, start: "2022-02-06 00:00:00", end: "2023-05-06 00:00:00", title: "Chief Government Agent", company: "Franecki-Predovic", details: "Error culpa aliquam. Sunt sequi architecto. Eos iure est. Laboriosam qui ipsa. Quos cumque quia.", student_id: 1},
