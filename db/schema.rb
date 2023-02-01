@@ -67,6 +67,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_31_214205) do
     t.string "photo_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_students_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

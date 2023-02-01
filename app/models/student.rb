@@ -7,6 +7,7 @@ class Student < ApplicationRecord
 		biography = Faker::Lorem.paragraph(sentence_count: 3)
 
 		return {
+			user_id: User.all.sample.id,
 			first_name: first_name,
 			last_name: last_name,
 			email: email,

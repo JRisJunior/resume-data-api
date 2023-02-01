@@ -1,3 +1,9 @@
+User.create!({
+  name: "Test",
+  email: "test@example.com",
+  password: "password"
+})
+
 5.times do #student
 	Student.create_fake!
 
