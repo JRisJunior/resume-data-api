@@ -4,6 +4,7 @@ class Student < ApplicationRecord
 	has_many :educations
 	has_many :skill_students
 	has_many :skills, through: :skill_students
+	has_many :capstones
 
 	def self.fake_params
 		first_name = Faker::Name.first_name
