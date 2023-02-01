@@ -167,7 +167,7 @@ Content-Type: application/json
 
 ### RESUMES ROUTES
 ### INDEX
-GET http://localhost:3000/resumes
+GET http://localhost:3000/resumes.json
 
 ### SHOW
-GET http://localhost:3000/resume/1
+GET http://localhost:3000/resume/1.json
