@@ -1,34 +1,30 @@
 class SkillStudentsController < ApplicationController
-	def index
-    skill = Skill.all
-    render json: skill.as_json
-  end
-
   def show
-    skill = Skill.find_by(id: params[:id])
-    render json: skill.as_json
+		skill_students = SkillStudent.find_by(id: params[:id])
+    render json: skill_students.as_json
   end
 
   def destroy
-    skill = Skill.find_by(id: params[:id])
-    skill.delete
+    skill_student = SkillStudent.find_by(id: params[:id])
+    skill_student.delete
     render json: {message: "Successfully deleted"}
   end
 
   def create
-    skill = Skill.create!(
-      name: params[:name]
-    )
-    skill.save
+    skill_student = SkillStudent.create!(skill_student_params)
+    skill_student.save
     render json: {message: "Successfully Created"}
   end
 
   def update
-    skill = Skill.find_by(id: params[:id])
-    skill.update(
-      name: params[:name]
-    )
-    skill.save
+    skill_student = SkillStudent.find_by(id: params[:id])
+    skill_student.update(skill_student_params)
+    skill_student.save
     render json: {message: "Successfully updated"}
   end
+
+	private
+		def skill_student_params
+			params.permit([:skill_id, :student_id])
+		end
 end
