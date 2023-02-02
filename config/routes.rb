@@ -54,6 +54,15 @@ Rails.application.routes.draw do
 
   patch "/skills/:id" => "skills#update"
 
+  #Skill Students
+  get "/skill_students/:id" => "skill_students#show"
+
+  delete "/skill_students/:id" => "skill_students#destroy"
+
+  post "/skill_students" => "skill_students#create"
+
+  patch "/skill_students/:id" => "skill_students#update"
+
   #EXPERIENCE ROUTES
   get "/experiences" => "experiences#index"
 
