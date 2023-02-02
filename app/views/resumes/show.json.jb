@@ -1,0 +1,3 @@
+@student.as_json(
+  methods: [:experiences, :educations, :skills, :capstones]
+)

@@ -1,0 +1,5 @@
+@students.map do |student|
+  student.as_json(
+    methods: [:experiences, :educations, :skills, :capstones]
+  )
+end
